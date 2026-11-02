@@ -1,0 +1,291 @@
+
+/* Page background */
+
+html {
+    background-color: #FFF8E7;
+}
+
+body {
+    width: 540px;
+    max-width: calc(100% - 40px);
+    margin: 30px auto;
+    padding: 28px;
+    box-sizing: border-box;
+
+    background-color: #8B8178;
+    border: 3px solid #171717;
+    border-radius: 24px;
+
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* Calculator display */
+
+#display {
+    background-color: #FFF8E7;
+    border: 3px solid #171717;
+    border-radius: 8px;
+
+    min-height: 145px;
+    padding: 20px;
+    margin-bottom: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* Calculation on the upper line */
+
+#calculation {
+    font-size: 25px;
+    color: #8B8178;
+    min-height: 32px;
+    word-break: break-all;
+}
+
+
+/* Result on the bottom line */
+
+#result {
+    font-size: 52px;
+    color: #171717;
+    margin-top: 8px;
+    word-break: break-all;
+}
+
+
+/* Calculator buttons layout */
+
+#arithmeticButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+
+/* All buttons */
+
+button {
+    min-height: 100px;
+
+    background-color: #FFF8E7;
+    border: 3px solid #171717;
+    border-radius: 8px;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27px;
+    color: #171717;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+
+/* Clear and Delete buttons */
+
+#clearallBtn,
+#deleteBtn {
+    grid-column: span 2;
+    min-height: 85px;
+
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+#clearallBtn {
+    background-color: #B76E79;
+    color: #171717;
+}
+
+#deleteBtn {
+    background-color: #A8E6CF;
+    color: #171717;
+}
+
+
+/* Number buttons arrangement */
+
+#sevenbtn {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#eigthbtn {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#ninebtn {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#fourbtn {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#fivebtn {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#sixbtn {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#onebtn {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#twobtn {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#threebtn {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+
+/* Operator buttons */
+
+#divisionBtn {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#multiplicationBtn {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+#subtractionBtn {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+#additionBtn {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+
+/* Royal blue operator buttons */
+
+#divisionBtn,
+#multiplicationBtn,
+#subtractionBtn,
+#additionBtn {
+    background-color: #4169E1;
+    color: #FFF8E7;
+}
+
+
+/* Last row buttons */
+
+#decimals {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#zerobtn {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+#equalstoBtn {
+    grid-column: 3;
+    grid-row: 5;
+
+    background-color: #B76E79;
+    color: #171717;
+}
+
+
+/* Button hover effects */
+
+button:hover {
+    background-color: #E8DFC9;
+}
+
+#clearallBtn:hover,
+#equalstoBtn:hover {
+    background-color: #A85C68;
+}
+
+#deleteBtn:hover {
+    background-color: #83D6B6;
+}
+
+#divisionBtn:hover,
+#multiplicationBtn:hover,
+#subtractionBtn:hover,
+#additionBtn:hover {
+    background-color: #3154BE;
+}
+
+
+/* Button press effect */
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* Disabled decimal button */
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* Smaller screens */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 16px;
+        margin: 15px auto;
+    }
+
+    #arithmeticButtons {
+        gap: 9px;
+    }
+
+    button {
+        min-height: 75px;
+        font-size: 22px;
+    }
+
+    #clearallBtn,
+    #deleteBtn {
+        min-height: 70px;
+        font-size: 19px;
+    }
+
+    #display {
+        min-height: 120px;
+        padding: 14px;
+    }
+
+    #calculation {
+        font-size: 20px;
+    }
+
+    #result {
+        font-size: 42px;
+    }
+
+}
